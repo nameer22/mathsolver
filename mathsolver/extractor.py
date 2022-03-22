@@ -1,5 +1,4 @@
 import math_thesaurus
-from mathsolver import solve
 
 '''
 Extract group of alphabetic numbers
