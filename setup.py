@@ -1,4 +1,5 @@
 from setuptools import setup
+import setuptools
 
 
 # Dynamically retrieve the information
@@ -20,8 +21,7 @@ setup (
     description='Decode natural language to solve mathemathical calculations',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=["mathsolver"],
-    package_dir={'mathsolver':'mathsolver'},
+    packages=setuptools.find_packages(),
     license='MIT',
     classifiers=[
             'Development Status :: 4 - Beta',
@@ -34,4 +34,5 @@ setup (
             'Topic :: Text Processing :: Linguistic',
             'Programming Language :: Python',
     ],
+    include_package_data=True,
 )
