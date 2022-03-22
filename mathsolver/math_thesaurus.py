@@ -62,5 +62,5 @@ SCALES = ['hundred', 'thousand', 'million', 'billion']
 # only single digit decimals written because when it comes to decimals we write `fifty three point six six seven > 53.667`
 DECIMAL_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
-NON_SEPERATORS = NUMBER_SYSTEM.keys()
+NON_SEPERATORS = list(NUMBER_SYSTEM.keys())
 NON_SEPERATORS.extend(['and'])

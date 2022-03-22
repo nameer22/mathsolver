@@ -20,7 +20,7 @@ def _extractOperators(sentence):
 '''
     Returns a tuple => (status, description, value)
 '''
-def solve(sentence):
+def solve(sentence, result_only=True):
     res = extractor.replaceAlphabeticalNumbers(sentence)
     if not res[0]:
         return (False, res[1], 0)
@@ -88,18 +88,18 @@ def solve(sentence):
         if len(operands) < 1:
             return (False, "Less operands specified for doing logarithm, One Needed", 0)
         res = math.log10(operands[0])
-        return (True, "Log of {} is {}".format(operands[0], res), res)
+        return (True, "Log of {} is {}".format(operands[0], res), res) if result_only==False else res
 
     return (False , "Mathematical equation if any in the sentence could not be decoded", 0)
 
 
 
 if __name__ == "__main__":
-    print solve("What is sum of 5 and 6")
-    print solve("What is multiplication of 5 and seven")
-    print solve("What is division of five hundred and seven and five")
-    print solve("what will be result of when 11 is multiplied with seven")
-    print solve("What is sum of five hundred and seven and five and six hundred and six")
+    print(solve("What is sum of 5 and 6"))
+    print(solve("What is multiplication of 5 and seven"))
+    print(solve("What is division of five hundred and seven and five"))
+    print(solve("what will be result of when 11 is multiplied with seven"))
+    print(solve("What is sum of five hundred and seven and five and six hundred and six"))
     while True:
-        sentence = raw_input("Please enter a sentence : ")
-        print solve(sentence)
+        sentence = input("Please enter a sentence : ")
+        print(solve(sentence))

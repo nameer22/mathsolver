@@ -1,4 +1,5 @@
 import math_thesaurus
+from mathsolver import solve
 
 '''
 Extract group of alphabetic numbers
@@ -166,7 +167,7 @@ def replaceAlphabeticalNumbers(sentence):
     numberCnt = 0
     replaceList = []
     for idx, word in enumerate(split_words):
-        if len(groupsPos) > numberCnt and  idx >= groupsPos[numberCnt][0] and idx <= groupsPos[numberCnt]:
+        if len(groupsPos) > numberCnt and  idx >= groupsPos[numberCnt][0] and idx <= groupsPos[numberCnt][1]:
             if idx == groupsPos[numberCnt][1]:
                 replaceList.append(str(numbers[numberCnt]))
                 numberCnt += 1
@@ -176,11 +177,11 @@ def replaceAlphabeticalNumbers(sentence):
 
 
 if __name__ == "__main__":
-    print replaceAlphabeticalNumbers("What is sum of 5 and 6")
-    print replaceAlphabeticalNumbers("What is sum of 5 and seven")
-    print replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six")
-    print replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six hundred and six")
-    print replaceAlphabeticalNumbers("what is five hundred divided by forty five point six seven when added with three hundred and forty two")
+    print(replaceAlphabeticalNumbers("What is sum of 5 and 6"))
+    print(replaceAlphabeticalNumbers("What is sum of 5 and seven"))
+    print(replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six"))
+    print(replaceAlphabeticalNumbers("What is sum of five hundred and seven and five and six hundred and six"))
+    print(replaceAlphabeticalNumbers("what is five hundred divided by forty five point six seven when added with three hundred and forty two"))
     while True:
-        sentence = raw_input("Please enter a sentence : ")
-        print solve(sentence)
+        sentence = input("Please enter a sentence : ")
+        print(solve(sentence))
