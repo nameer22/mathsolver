@@ -1,4 +1,3 @@
-from setuptools import setup
 import setuptools
 
 
@@ -13,7 +12,7 @@ URL = MATHSOLVER.__url__
 with open("README.md", "r") as f:
     long_description = f.read()
 
-setup (
+setuptools.setup (
     name='mathsolver',
     version=VERSION,
     url=URL,
