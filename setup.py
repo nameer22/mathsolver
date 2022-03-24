@@ -2,6 +2,7 @@ from setuptools import setup
 import setuptools
 
 
+
 # Dynamically retrieve the information
 MATHSOLVER = __import__('mathsolver')
 VERSION = MATHSOLVER.__version__

@@ -20,7 +20,6 @@ OPERATOR_SYNONYMS = {
 }
 
 
-
 NUMBER_SYSTEM = {
     'zero'     : 0,
     'one'      : 1,

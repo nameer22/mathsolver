@@ -1,5 +1,6 @@
 import math_thesaurus
 
+
 '''
 Extract group of alphabetic numbers
 '''

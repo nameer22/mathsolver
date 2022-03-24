@@ -4,7 +4,6 @@ import extractor
 import math_thesaurus
 
 
-
 def _extractOperators(sentence):
     operatorsList = []
     operatorsFound = []
